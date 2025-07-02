@@ -559,6 +559,11 @@ result_entry = Text(main_window, bg = "lavenderblush", width=80, height=5)
 
 # function for transfering selected data from GUI to ranking.db
 def insert_rankings(data_source, ranking, identifier, property):
+
+    import os
+    print("Current working directory:", os.getcwd())
+    print("Database file exists:", os.path.exists('saved_rankings.db'))
+
     data_connect = connect('saved_rankings.db')
 
     data_cursor = data_connect.cursor()
