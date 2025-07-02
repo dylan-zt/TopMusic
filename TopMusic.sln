@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Top Music stats", "Top Music stats\Top Music stats.pyproj", "{1150EC6A-7564-4F03-9CAD-90036826F506}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1150EC6A-7564-4F03-9CAD-90036826F506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1150EC6A-7564-4F03-9CAD-90036826F506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B0A9622C-508B-4CD1-BE6B-ED9ED7D35120}
+	EndGlobalSection
+EndGlobal
