@@ -5,6 +5,15 @@ from tkinter.ttk import Progressbar
 from re import *
 from webbrowser import open as urldisplay
 from sqlite3 import *
+import sys
+import os
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
 
 
 
@@ -93,20 +102,11 @@ def download(url = 'http://www.wikipedia.org/',
     # Return the downloaded document to the caller
     return web_page_contents
 
-#
-#--------------------------------------------------------------------#
-
-
-
-#-----Student's Solution---------------------------------------------#
-#
-# Put your solution below.
-#
 
 # Create the main window
 main_window = Tk()
 
-pop_music_image = PhotoImage(file='bubblegum_cover.gif')
+pop_music_image = PhotoImage(file=resource_path('bubblegum_cover.gif'))
 main_window.title("Pop Music Statistics")
 main_window.geometry("700x500")
 main_window.configure(bg="lightsteelblue")
@@ -564,7 +564,7 @@ def insert_rankings(data_source, ranking, identifier, property):
     print("Current working directory:", os.getcwd())
     print("Database file exists:", os.path.exists('saved_rankings.db'))
 
-    data_connect = connect('saved_rankings.db')
+    data_connect = connect(resource_path('saved_rankings.db'))
 
     data_cursor = data_connect.cursor()
     
